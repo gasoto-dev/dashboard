@@ -11,6 +11,7 @@ import PRVelocityChart from "@/components/PRVelocityChart"
 import CycleTimeChart from "@/components/CycleTimeChart"
 import RepoTable from "@/components/RepoTable"
 import StatCard from "@/components/StatCard"
+import ProjectHistory from "@/components/ProjectHistory"
 
 export const revalidate = 300 // 5-min ISR
 
@@ -113,6 +114,8 @@ export default async function DashboardPage() {
             <RepoTable openIssues={openIssues} testCounts={testCounts} />
           </div>
         </section>
+        {/* Project History */}
+        <ProjectHistory />
       </main>
     </div>
   )
