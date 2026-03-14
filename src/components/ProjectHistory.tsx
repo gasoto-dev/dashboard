@@ -27,7 +27,7 @@ const HISTORY = [
       { label: "codelens", detail: "Codebase modernization analyzer · 70 tests · dependency graph" },
       { label: "portfolio", detail: "George Soto portfolio site · 25 tests · codeyoursuccess.com" },
       { label: "kelly-soto-photography", detail: "Kelly's photography portfolio · 32 tests · masonry→uniform grid, lightbox" },
-      { label: "dashboard", detail: "This dashboard · 29 tests · GitHub metrics + Vex audit data" },
+      { label: "dashboard", detail: "This dashboard · 34 tests · GitHub metrics + Vex audit data" },
     ],
   },
   {
