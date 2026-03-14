@@ -1,8 +1,41 @@
 import { render, screen } from "@testing-library/react"
+import ProjectHistory from "@/components/ProjectHistory"
 import PRVelocityChart from "@/components/PRVelocityChart"
 import CycleTimeChart from "@/components/CycleTimeChart"
 import RepoTable from "@/components/RepoTable"
 import StatCard from "@/components/StatCard"
+
+// --- ProjectHistory ---
+describe("ProjectHistory", () => {
+  it("renders without crashing", () => {
+    render(<ProjectHistory />)
+  })
+  it("shows all four category sections", () => {
+    render(<ProjectHistory />)
+    expect(screen.getByText("Infrastructure")).toBeInTheDocument()
+    expect(screen.getByText("Agent Crew")).toBeInTheDocument()
+    expect(screen.getByText("Repos")).toBeInTheDocument()
+    expect(screen.getByText("Workflow Standards")).toBeInTheDocument()
+  })
+  it("lists the three AI agents", () => {
+    render(<ProjectHistory />)
+    expect(screen.getByText("Ren AI")).toBeInTheDocument()
+    expect(screen.getByText("Forge AI")).toBeInTheDocument()
+    expect(screen.getByText("Vex AI")).toBeInTheDocument()
+  })
+  it("lists all repos", () => {
+    render(<ProjectHistory />)
+    expect(screen.getByText("the-crate")).toBeInTheDocument()
+    expect(screen.getByText("codelens")).toBeInTheDocument()
+    expect(screen.getByText("portfolio")).toBeInTheDocument()
+    expect(screen.getByText("kelly-soto-photography")).toBeInTheDocument()
+    expect(screen.getByText("dashboard")).toBeInTheDocument()
+  })
+  it("renders the section container", () => {
+    render(<ProjectHistory />)
+    expect(screen.getByTestId("project-history")).toBeInTheDocument()
+  })
+})
 
 // --- StatCard ---
 describe("StatCard", () => {
